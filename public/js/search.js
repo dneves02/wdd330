@@ -7,7 +7,7 @@ function search() {
    var params = { s: searchString, apikey: '66f670e1' };
  
    // Use jQuery to make the get request
-   $.get('http://www.omdbapi.com/', params, function(data, status) {
+   $.get('https://www.omdbapi.com/', params, function(data, status) {
      // For debugging purposes, make a note that we're back
      console.log('Back from server with the following results:');
      console.log(status);
