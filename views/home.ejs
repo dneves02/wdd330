@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>New Page</title>
-</head>
+	<title>Movie Search</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="/js/search.js"></script>
 
+</head>
 <body>
-   <h1>Hey <%= username %>! Whats up?</h1>
-   <h3>Your email is <%= email %>.</h3>
+
+	<h1>Movie Search (jQuery)</h1>
+
+	<p>Please enter a movie title to search:</p>
+	<input type="text" id="txtSearch">
+	<button onclick="search();">Search</button>
+
+	<div id="divResults">
+		<h2>Results</h2>
+		<ul id="ulResults">
+		</ul>
+	</div>
+
 </body>
 </html>
-
