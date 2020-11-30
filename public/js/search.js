@@ -18,13 +18,13 @@ function search() {
  }
  
  function updateResultList(data) {
-   if (data.Search && data.Search.length > 0) {
+   if (data.hits && data.hits.length > 0) {
      var resultList = $('#ulResults');
      resultList.empty();
      
      // you could use a forEach here as well...
-     for (var i = 0; i < data.Search.length; i++) {
-       var title = data.Search[i].Title;
+     for (var i = 0; i < data.hits.length; i++) {
+       var title = data.hits[i].recipe.label;
        resultList.append('<li><p>' + title + '</p></li>');
      }
    }
