@@ -6,19 +6,7 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', function(req, res) {
-    console.log('Hello Davi! Going to your home page');
-    var name = getUser();
-    var emailAddess = "dneves@zeeksgeeks.com";
-  
-    var params= {username: name, email: emailAddess};
-    res.render("home", params)
-  })
-  .use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  })
-  .get('/edamam', (req, res) => {
+  .get('/', (req, res) => {
     request(
       { url: 'https://www.edamam.com/'},
       (error, response, body) => {
@@ -29,6 +17,11 @@ express()
         res.json(JSON.parse(body));
       }
     )
+    res.render("home")
+  })
+  .use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
