@@ -25,7 +25,9 @@ function search() {
      // you could use a forEach here as well...
      for (var i = 0; i < data.hits.length; i++) {
        var title = data.hits[i].recipe.label;
+       var url = data.hits[i].recipe.uri;
        resultList.append('<li><p>' + title + '</p></li>');
+       resultList.append('<li><a href="url">' + url + '</a></li>');
      }
    }
  }
