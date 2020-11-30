@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>myMenuApp</title>
+   <title>myMenuApp</title>
+   <meta name="description" content="Search Recipes and Build a Menu Plan">
+	<meta name="keywords" content="Food, Recipes, Menu">
+	<meta name="author" content="Davi Neves">
+
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- styles -->
+	<link rel="stylesheet" href="/stylesheets/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-   
    <script src="/js/search.js"></script>
 
 </head>
 <body>
+   <header>
+	   <h1>Search for Recipes</h1>
+   </header>
+   <div class="clearfix">
+        <section>
+           <p>Please enter an ingredient or dish to search:</p>
+           <div class="row">
+               <div class="col-4 col-s-3 menu">
+                  <div class="button-link-container">
+                     
+                     <input type="text" id="txtSearch">
+	                  <button onclick="search();">Search</button>
+					   </div>
+				   </div>
+	
 
-	<h1>Search for Recipes</h1>
+            <div id="divResults">
+               <h2>Results</h2>
+               <ul id="ulResults">
+               </ul>
+            </div>
+         </div>
+</section>    
+</div>
 
-	<p>Please enter an ingredient or dish to search:</p>
-	<input type="text" id="txtSearch">
-	<button onclick="search();">Search</button>
-
-	<div id="divResults">
-		<h2>Results</h2>
-		<ul id="ulResults">
-		</ul>
-	</div>
-
+   <a href="#"><div class="button-link link-current">myMenuApp</div></a><br />
 </body>
 </html>
