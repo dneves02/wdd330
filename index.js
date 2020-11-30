@@ -9,8 +9,7 @@ express()
   .get('/', function(req, res) {
     console.log('Hello Davi! Going to your home page');
     var name = getUser();
-    var emailAddess = "dneves@zeeksgeeks.com";
-  
+    var emailAddess = "nev05002@byui.edu";
     var params= {username: name, email: emailAddess};
     res.render("home", params)
   })
