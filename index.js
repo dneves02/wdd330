@@ -8,10 +8,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', function(req, res) {
     console.log('Hello Davi! Going to your home page');
-    var name = getUser();
-    var emailAddess = "nev05002@byui.edu";
-    var params= {username: name, email: emailAddess};
-    res.render("home", params)
+    res.render("home")
   })
   .use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -31,8 +28,3 @@ express()
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-  
-
-function getUser(){
-    return "Davi";
-}
