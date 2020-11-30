@@ -14,8 +14,25 @@ express()
     var params= {username: name, email: emailAddess};
     res.render("home", params)
   })
+  .use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+  })
+  .get('/edamam', (req, res) => {
+    request(
+      { url: 'https://www.edamam.com/'},
+      (error, response, body) => {
+        if (error || response.statusCode !== 200) {
+          return res.status(500).json({ type: 'error', message: err.message });
+        }
+  
+        res.json(JSON.parse(body));
+      }
+    )
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
+  
 
 function getUser(){
     return "Davi";
