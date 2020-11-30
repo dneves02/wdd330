@@ -14,6 +14,10 @@ express()
     res.header('Access-Control-Allow-Origin', '*');
     next();
   })
+  .get('/myrecipes', function(req, res) {
+    console.log('Hello, getting your recipes your from cookbook');
+    res.render("myrecipes")
+  })  
   .get('/edamam', (req, res) => {
     request(
       { url: 'https://www.edamam.com/'},
