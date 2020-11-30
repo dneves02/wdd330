@@ -19,7 +19,9 @@ express()
     res.header('Access-Control-Allow-Origin', '*');
     next();
   })
-  .get('/myrecipes', getRecipes)
+  .get('/myrecipes', function(req,res){
+    res.render("myrecipes")
+  })
 
   .get('/edamam', (req, res) => {
     request(
