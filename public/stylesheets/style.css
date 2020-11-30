@@ -15,7 +15,7 @@ p {
 
 
 /* This is the style of our error messages */
-#aprError, #termError, #amountError, #reqApr, #reqTerm, #reqAmount {
+#aprError {
     width  : 100%;
     padding: 0;
   
