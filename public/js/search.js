@@ -26,8 +26,11 @@ function search() {
      for (var i = 0; i < data.hits.length; i++) {
        var title = data.hits[i].recipe.label;
        var url = data.hits[i].recipe.url;
+       var ingredients = data.hits[i].recipe.ingredients;
+
        resultList.append('<li><p>' + title + '</p></li>');
        resultList.append('<li><a title="Link" href='+ url +'>' + url + '</a></li>');
+       resultList.append('<li><p>' + ingredients + '</p></li>');
      }
    }
  }
