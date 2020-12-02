@@ -25,6 +25,7 @@ function search() {
      // you could use a forEach here as well...
      for (var i = 0; i < data.Search.length; i++) {
        var title = data.Search[i].Title;
+       
        resultList.append('<li><p>' + title + '</p></li>');
      }
    }
