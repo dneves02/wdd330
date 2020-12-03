@@ -13,10 +13,10 @@ p {
   font-weight: bold;
 }
 .title_image {
-  height: 100px;
+  height: 250px;
 }
 
- ul li:nth-child(1) {
+ ul li:nth-child {
   list-style-type: none;
 }
 

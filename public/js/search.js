@@ -33,7 +33,7 @@ function updateResultList(data) {
       resultList.append('<ul>')
       for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
         var ingredient = data.hits[i].recipe.ingredients[j];
-        resultList.append('<li><p>' + ingredient.text + ", " + ingredient.weight + '</p></li>');
+        resultList.append('<li><p>' + ingredient.text + '</p></li>');
         
       } 
       resultList.append('</ul></li>')
