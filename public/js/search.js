@@ -27,13 +27,20 @@ function updateResultList(data) {
       var title = data.hits[i].recipe.label;
       var url = data.hits[i].recipe.url;
       var image = data.hits[i].recipe.image;
-      resultList.append('<li><img class="title_image" src="'+ image +'"></li>');
+      resultList.append('<li><img class="title_image" src="'+ image +'">');
       
-      resultList.append('<li><a href="'+ url +'">' + title + '</a></li>');
-        for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
+      resultList.append('<h3><a href="'+ url +'">' + title + '</a></h3>');
+      resultList.append('<ul>')
+      for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
         var ingredient = data.hits[i].recipe.ingredients[j];
         resultList.append('<li><p>' + ingredient.text + ", " + ingredient.weight + '</p></li>');
+        
       } 
+      resultList.append('</ul></li>')
      }
    }
  }
+
+ //$('ul li:nth-child(1)').css('list-style-type','none');
+
+ //$('ul li').css('list-style-type','none');
