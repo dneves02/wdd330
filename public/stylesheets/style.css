@@ -12,7 +12,9 @@ p {
   text-align: left;
   font-weight: bold;
 }
-
+.title_image {
+  height: 100px;
+}
 
 
 /* This is the style of our error messages */

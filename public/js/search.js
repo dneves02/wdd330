@@ -27,9 +27,9 @@ function updateResultList(data) {
       var title = data.hits[i].recipe.label;
       var url = data.hits[i].recipe.url;
       var image = data.hits[i].recipe.image;
-      resultList.append('<li><p>' + title + '</p><img scr="'+ image +'"></li>');
+      resultList.append('<li><img class="title_image" scr="'+ image +'"></li>');
       
-      resultList.append('<li><a href="'+ url +'">' + url + '</a></li>');
+      resultList.append('<li><a href="'+ url +'">' + title + '</a></li>');
         for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
         var ingredient = data.hits[i].recipe.ingredients[j];
         resultList.append('<li><p>' + ingredient.text + ", " + ingredient.weight + '</p></li>');
