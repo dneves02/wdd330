@@ -16,6 +16,9 @@ p {
   height: 100px;
 }
 
+ul li:first {
+  list-style-type: none;
+}
 
 /* This is the style of our error messages */
 #aprError {
