@@ -28,10 +28,10 @@ function updateResultList(data) {
       var url = data.hits[i].recipe.url;
       resultList.append('<li><p>' + title + '</p></li>');
       resultList.append('<li><a title="Link" href='+ url +'>' + url + '</a></li>');
-      /* for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
-        var ingredients = data.hits[i].recipe.ingredients[j];
-        resultList.append('<li><p>' + ingredients + '</p></li>');
-      }   */ 
+        for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
+        var ingredient = data.hits[i].recipe.ingredients[j];
+        resultList.append('<li><p>' + ingredient.text + ", " + ingredient.weight + '</p></li>');
+      } 
      }
    }
  }
