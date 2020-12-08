@@ -19,13 +19,13 @@ express()
     res.header('Access-Control-Allow-Origin', '*');
     next();
   })
-  .get('/myrecipes', function(req,res){
-    res.render("myrecipes")
+  .get('/myMenu', function(req,res){
+    res.render("myMenu")
   })
 
   .get('/edamam', (req, res) => {
     request(
-      { url: 'https://www.edamam.com/'},
+      { url: 'https://api.edamam.com'},
       (error, response, body) => {
         if (error || response.statusCode !== 200) {
           return res.status(500).json({ type: 'error', message: err.message });
