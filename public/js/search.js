@@ -27,16 +27,16 @@ function updateResultList(data) {
       var title = data.hits[i].recipe.label;
       var url = data.hits[i].recipe.url;
       var image = data.hits[i].recipe.image;
-      resultList.append('<li style="list-style-type: none;"><a href="'+ url +'"><img class="title_image" src="'+ image +'"><h1>' + title + '</h1></a>');
+      resultList.append('<li style="list-style-type: none;"><a href="'+ url +'"><img class="title_image" src="'+ image +'"><br /><h1>' + title + '</h1></a><br />');
       
       //resultList.append('<h3><a href="'+ url +'">' + title + '</a></h3>');
       resultList.append('<ul>')
       for (var j = 0; j < data.hits[i].recipe.ingredients.length; j++) {
         var ingredient = data.hits[i].recipe.ingredients[j];
-        resultList.append('<li><p>' + ingredient.text + '</p></li><br /><br />');
+        resultList.append('<li><p>' + ingredient.text + '</p></li>');
         
       } 
-      resultList.append('</ul></li>')
+      resultList.append('</ul></li><br /><br />')
      }
    }
  }
