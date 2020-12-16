@@ -131,7 +131,10 @@ p {
     .link-current {
       color: #D41317;
     }
-  
+    
+    .contact {
+      color: #fff;
+    }
     /* Style the footer */
     footer {
       background-color: #06304d;
