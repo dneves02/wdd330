@@ -59,8 +59,6 @@ extra-virgin olive oil', 'https://www.marthastewart.com/343399/lasagna','https:/
 
 
 
-
-
 CREATE USER dneves WITH PASSWORD 'mymenu123';
 GRANT SELECT, INSERT, UPDATE, DELETE ON recipes TO dneves;
 GRANT USAGE, SELECT ON SEQUENCE recipes_id_seq TO dneves;
