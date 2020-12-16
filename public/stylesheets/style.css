@@ -122,7 +122,7 @@ p {
       display: inline-block;
       padding: 10px;
       font: normal normal bold 20px spinnaker,sans-serif ;
-      color:#1A2B6D;
+      color:#777;
     }
     .button-link:hover, .button-link:focus {
       background-color: #777;
