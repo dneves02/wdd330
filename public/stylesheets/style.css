@@ -24,6 +24,11 @@
   input, input:valid {
     border: 2px solid black;
     text-align: center;
+    width: 200px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
   }
   
   .error {
@@ -49,16 +54,8 @@
     padding: 12px 16px;
   }
   
-  .input {
-    width: 200px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    padding: 12px 16px;
+  input {
+    
 
   }
   
@@ -83,7 +80,6 @@
     p {
       color:#F7D360;
       text-align: center;
-      text-align: left;
       font-weight: bold;
     }
     .row:after {
@@ -197,7 +193,7 @@
     }
     @media screen and (min-width: 768px) {
       h1{
-        font-size: 22px;
+        font-size: 32px;
       }
     }
   
