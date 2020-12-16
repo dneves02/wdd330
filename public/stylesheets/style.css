@@ -69,12 +69,16 @@
     .welcome {
       color:#F2954E;
       text-align: center;
+      font-family: cursive;
     }
   
     .message {
       color:#F7D360;
       text-align: center;
       font-weight: bold;
+      font-family: cursive;
+      margin-top: -35px;
+      font-size: 30px;
     }
 
     
@@ -137,7 +141,8 @@
       background-color: #06304d;
       padding: 10px;
       text-align: center;
-      color: white;
+      
+      color:#F7D360;
     }
   
   
