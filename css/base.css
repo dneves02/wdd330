@@ -37,3 +37,7 @@ body {
    font-family: 'Helvetica', sans-serif;
    font-weight: bold;
 }
+ul {
+   list-style-type: none;
+   padding: 0;
+}
