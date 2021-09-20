@@ -1,7 +1,7 @@
 const links = [
    {
      label: "Week01",
-     url: "week1/hello.html"
+     url: "./week01/hello.html"
    }
 ]
 function get_index(theButtonClicked){
