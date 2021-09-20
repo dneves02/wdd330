@@ -1,6 +1,7 @@
 .banner-top, .content-top, .button {
    border-radius: 5px;
    font-size: 16px;
+   padding: 5px;
 }
 body {
    font-family: 'Verdana', sans-serif;
