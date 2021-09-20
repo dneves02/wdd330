@@ -1,0 +1,39 @@
+.banner-top, .content-top, .button {
+   border-radius: 5px;
+   font-size: 16px;
+}
+body {
+   font-family: 'Verdana', sans-serif;
+   font-size: 16px;
+   background-color: #262626;
+}
+
+.center-text {
+   text-align: center;
+}
+.header {
+   padding: 10px 0px 10px 0px;
+   font-family: 'Helvetica', sans-serif;
+   font-weight: bold;
+}
+.home-header {
+   font-size: 30px;
+   font-variant: small-caps;
+   text-shadow: 3px 3px rgb(179, 190, 192);
+}
+.hover-bold:hover {
+	font-weight: bold;
+}
+.section {
+   margin: 10px auto 10px auto;
+   background-color: #eff;
+   padding: 10px;
+   color: #000;
+   border-radius: 5px;
+   box-shadow: 0 5px #aaf;
+}
+.section-header {
+   font-size: 20px;
+   font-family: 'Helvetica', sans-serif;
+   font-weight: bold;
+}
