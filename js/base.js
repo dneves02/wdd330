@@ -6,6 +6,10 @@ const links = [
    {
       label: "Week02",
       url: "./week02/week2.html"
+   },
+   {
+      label: "Week03",
+      url: "./week03/week3.html"
    }
 ]
 function get_index(theButtonClicked){
