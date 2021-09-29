@@ -1,1 +1,61 @@
-<h1>Hey</h1>
+<!DOCTYPE html>
+   <html lang="en-US">
+      <head>
+         <title> Davi Neves' Portfolio</title>
+         <meta charset="UTF-8" />
+         <meta name="author" content="Davi Neves">
+   
+         <!-- CSS only -->
+         <link rel="stylesheet" href="../css/base.css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+         <!-- JS, Popper.js, and jQuery -->
+         <script src="js/base.js"></script>
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+      </head>
+      <body>
+         <h2>Core 1</h2>
+         <input type="text" id="text_input">
+         <button onclick="get_text()">Go</button>
+         <div id="text_box">
+         </div>
+         <script>
+            function get_text(){
+               const input = document.getElementById("text_input").value 
+               const box = document.getElementById("text_box")
+               box.innerHTML = 'You wrote: ' + input;
+
+               // J-query //
+               var text_input = $('#text_input').val();
+               var text_box = $('#text_box');
+               text_box.append('<h2>You wrote: '+text_input+'</h2>');
+            }
+         </script>
+
+         <h2>Core 2</h2>
+         <input type="number" id="input">
+         <button onclick="get_number()">Go</button>
+         <div id="output">
+         </div>
+         <script>
+            function get_number(){
+               const input = document.getElementById("input").value 
+               const box = document.getElementById("output")
+               var output = 0;
+               for (var i = 0; i <= input; i++){
+                  output += i;
+               }
+               
+               box.innerHTML = 'Your total: ' + output;
+
+               // J-query //
+               var text_input = $('#input').val();
+               var text_box = $('#output');
+               text_box.append('<h2>You wrote: '+output+'</h2>');
+            }
+         </script>
+      </body>
+   </html>
