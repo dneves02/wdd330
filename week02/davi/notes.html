@@ -18,16 +18,98 @@
       </head>
       <body>
          <h2>JS Basics</h2>
-         hello' * 5;
-         //NaN
-         <br>
-         Number('23');
-         //23
-         <br>
-         Number('hello');
-         //NaN
-         <h3></h3>
+         <script>
+            'hello' * 5;
+            //NaN
+            
+            Number('23');
+            //23
+            
+            Number('hello');
+            //NaN
 
+            parseInt('1010',2); // converts from binary, back to decimal
+            //10
+
+            parseInt('omg',36);
+            //31912
+
+            parseInt('23',10);
+            //23
+            parseInt('1010',2); // converts from binary, back to decimal
+            //10
+
+            parseInt('omg',36);
+            // 31912
+
+            parseInt('23',10);
+            // 23
+            Number(address);
+            //NaN
+
+            parseInt('2.4',10);
+            //2
+            parseInt(2.9,10);
+            //2
+            parseFloat('2.9',10);
+            //2.9
+            10 + null; // null behaves like zero
+            //
+            10 + undefined; // undefined is not a number
+            // NaN
+          
+            Boolean('hello');
+            // true
+
+            Boolean(42);
+            // true
+
+            Boolean(0);
+            // false
+
+            /*Only 9 values are always false and these are known as falsy values:
+
+            * "" // double quoted empty string literal
+            * '' // single quoted empty string literal
+            * `` // empty template literal
+            * 0
+            * -0 // considered different to 0 by JavaScript!
+            * NaN
+            * false
+            * null
+            * undefined
+
+            */
+         </script>
+         <h2>Arrays</h2>
+         <script>
+
+            const myArray = [];
+               //or
+            const myArray = new Array();
+
+            typeof []
+            // 'object'
+
+            const heroes = [];
+                
+            //We can find out the value of element 0 in the heroes array using the following code:
+
+            heroes[0]
+            // undefined
+
+            heroes[0] = 'Superman';
+            heroes[0] = 'Batman';
+
+            heroes[1] = 'Wonder Woman';
+            heroes[2] = 'Flash';
+
+            heroes[5] = 'Aquaman';
+            heroes;
+            //['Batman', 'Wonder Woman', 'Flash', undefined, undefined, 'Aquaman']
+                
+
+         </script>
          <h2>Funcitons</h2>
          <script>
             //Defining a function
