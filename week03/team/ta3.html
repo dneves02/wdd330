@@ -6,7 +6,7 @@
   </head>
   <body>
     <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-    <div><h2>Exercise #1</h2></div>
+    <div id="ex1"><h2>Exercise #1</h2></div>
     <div><h2>Exercise #2</h2></div>
     <div><h2>Exercise #3</h2></div>
     <div><h2>Exercise #4</h2></div>
@@ -40,6 +40,7 @@
         { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
         { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
       ];
+
 
       const people = [
         'Beck, Glenn',
@@ -90,12 +91,20 @@
 
       // Array.prototype.map()
       // 2. Give us an array of the inventors' first and last names
-
+      const full_name = inventors.map(function (name){
+         return `${name.first} ${name.last}`;
+      });
+      console.log(full_name);
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
-
+      const birth = inventors.sort(function(x,y){
+         //const age = inventors.passed;
+      });
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
+      const age1 = inventors.reduce(function(result, inventors){
+         return inventors.passed - inventors.year;
+      });
 
       // 5. Sort the inventors by years lived
 
@@ -129,7 +138,7 @@
 
       // ## Array Cardio Day 2
 
-      const people = [
+      const people2 = [
          { name: 'Wes', year: 1988 },
          { name: 'Kait', year: 1986 },
          { name: 'Irv', year: 1970 },
