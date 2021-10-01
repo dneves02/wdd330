@@ -6,11 +6,11 @@
          <meta name="author" content="Davi Neves">
    
          <!-- CSS only -->
-         <link rel="stylesheet" href="../css/base.css">
+         <link rel="stylesheet" href="../../css/base.css">
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
    
          <!-- JS, Popper.js, and jQuery -->
-         <script src="js/base.js"></script>
+         <script src="../../js/base.js"></script>
          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -44,6 +44,9 @@
 
             parseInt('23',10);
             // 23
+            const address = '221B Baker Street';
+            parseInt(address, 10)
+            // 221
             Number(address);
             //NaN
 
@@ -89,7 +92,7 @@
 
             const myArray = [];
                //or
-            const myArray = new Array();
+            const myArray1 = new Array();
 
             typeof []
             // 'object'
@@ -107,7 +110,7 @@
             heroes[5] = 'Aquaman';
             heroes;
             //['Batman', 'Wonder Woman', 'Flash', undefined, undefined, 'Aquaman']
-                
+            console.log(heroes);    
 
          </script>
       <br>
@@ -189,7 +192,7 @@
             }
 
             //Declaration notation
-            function square(x) {
+            function square3(x) {
                return x * x;
             }
 
@@ -199,7 +202,7 @@
             }
 
             //Arrow functions
-            const power = (base, exponent) => {
+            const power1 = (base, exponent) => {
                let result = 1;
                for (let count = 0; count < exponent; count++) {
                   result *= base;
@@ -221,18 +224,18 @@
             greet("Harry");
             console.log("Bye");
 
-            function square(x) { return x * x; }
-            console.log(square(4, true, "hedgehog"));
+            function squarex(x) { return x * x; }
+            console.log(squarex(4, true, "hedgehog"));
             // → 16
 
-            function power(base, exponent) {
+            function power2(base, exponent) {
                if (exponent == 0) {
                   return 1;
                } else {
-                  return base * power(base, exponent - 1);
+                  return base * power2(base, exponent - 1);
                }
             }
-            console.log(power(2, 3));
+            console.log(power2(2, 3));
             // → 8
 
             parseInt('2.4',10);
