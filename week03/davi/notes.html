@@ -19,7 +19,18 @@
       <body>
          <h2></h2>
          <script>
+            //forEach:
+            [1, 2, 3].forEach(function (item, index) {
+            console.log(item, index);
+            });
+            //map
+            const three = [1, 2, 3];
+            const doubled = three.map(function (item) {
+            return item * 2;
+            });
+            console.log(three === doubled, doubled); // false, [2, 4, 6]
 
+            
          </script>
          <br><br><br>
          <a href="../../index.html">
