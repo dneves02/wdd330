@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>myMenuApp</title>
+   <meta name="description" content="Search Recipes and Build a Menu Plan">
+	<meta name="keywords" content="Food, Recipes, Menu">
+	<meta name="author" content="Davi Neves">
+
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- encoding -->
+    <meta charset="UTF-8" />
+
+    <!-- styles -->
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+   <script src="/js/search.js"></script>
+   
+</head>
+<body>
+   <header>
+      <h2 class="welcome">Welcome to Smart DeliveryApp</h2>
+      <h3 class="message">Fancy, tasty, and warm food right at your door!</h3>
+   </header>
+      <div class="clearfix">
+         <section>
+            <div class="row">
+               <div class="col-12 col-s-3 menu" style="margin-left: 300px;">
+                  <h3 style="margin-bottom: 10px;">Search for recipes:</h3>
+                  <input style="margin-bottom: -14px;" type="text" id="txtSearch">
+                  <button id="search" onclick="search();">Search</button>
+               </div>
+               <div class="col-12 col-s-6 results" id="divResults" style="margin-left: 300px;">
+                  <h1>Results</h1>
+                  <ul id="ulResults">
+                  </ul>
+               </div>
+            </div>
+         </section>
+      </div>
+      <footer>
+         <br /><br />
+         Address. xxx XXX Portland, OR xxxxx<br />
+         Tel. 503-891-3045<br />
+         <a class="email" href="mailto:nev05002@byui.edu">Email: nev05002@byui.edu</a><br />
+         © 2020 by DNeves.
+         <br />
+         <a href="#">
+            <div class="button-link link-current">myMenuApp</div>
+         </a><br />
+         <a class="contact" href="mailto:nev05002@byui.edu">Contact Us!</a>
+      </footer>
+   </body>
+</html>
