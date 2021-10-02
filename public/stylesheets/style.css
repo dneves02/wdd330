@@ -145,9 +145,11 @@
       padding: 10px;
       text-align: center;
       color:#F7D360;
+
+    }
+    #footer{
       margin-top: 20px;
     }
-  
   
     @media only screen and (min-width: 600px) {
       .col-s-1 {width: 8.33%;}
