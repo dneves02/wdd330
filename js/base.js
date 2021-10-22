@@ -21,7 +21,7 @@ const links = [
    },
    {
       label: "Week06",
-      url: "./week06/week6.html"
+      url: "./week06/week06.html"
    },
 ]
 function get_index(theButtonClicked){
