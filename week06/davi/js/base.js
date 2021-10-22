@@ -1,4 +1,4 @@
-var myTasks = {}
+var myTasks = []
 
 function AddNewTask(){
    const newTask = document.getElementById("new_task");
@@ -7,14 +7,13 @@ function AddNewTask(){
 }
 
 function addNewTask(task){
-   const task = task;
-   myTasks.appendChild
+   myTasks.push(task);
 }
 
-function showHikeList() {
-   const hikeListElement = document.getElementById("hikes");
-   hikeListElement.innerHTML = "";
-   renderHikeList(hikeList, hikeListElement);
+function showtasks() {
+   const my_task = document.getElementById("my_task");
+   my_task.innerHTML = `<td>${myTasks}</td>`;
+   //renderHikeList(hikeList, hikeListElement);
  }
  
  function renderHikeList(hikes, parent) {
