@@ -23,6 +23,10 @@ const links = [
       label: "Week06",
       url: "./week06/week06.html"
    },
+   {
+      label: "Week07",
+      url: "./week07/week07.html"
+   },
 ]
 function get_index(theButtonClicked){
    var index = $("#index");

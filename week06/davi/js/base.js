@@ -1,6 +1,6 @@
 var myTasks = []
 
-function AddNewTask(){
+function addTask(){
    const newTask = document.getElementById("new_task");
    addNewTask(newTask);
 
@@ -11,7 +11,7 @@ function addNewTask(task){
 }
 
 function showtasks() {
-   const my_task = document.getElementById("my_task");
+   const my_task = document.getElementById("my_tasks");
    my_task.innerHTML = `<td>${myTasks}</td>`;
    //renderHikeList(hikeList, hikeListElement);
  }
