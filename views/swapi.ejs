@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>myMenuApp</title>
-   <meta name="description" content="Search Recipes and Build a Menu Plan">
-	<meta name="keywords" content="Food, Recipes, Menu">
+   <title>SWAPI Exercise</title>
+   <link rel="stylesheet" type="text/css" href="ta8.css" />
+   <meta name="description" content="Star Wars Api">
 	<meta name="author" content="Davi Neves">
 
 	<!-- responsive -->
@@ -16,41 +16,37 @@
 	<link rel="stylesheet" href="/stylesheets/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
    <script src="/js/search.js"></script>
-   <script src="./index.js"></script>
+   
 </head>
 <body>
    <header>
-	   <h2>myMenuApp</h2>
+      <h2 class="welcome">Welcome to Star Wars Api Search</h2>
    </header>
       <div class="clearfix">
          <section>
             <div class="row">
-               <p>Search a recipe:</p>
-               <div class="col-12 col-s-6 menu" >
-                  <input type="text" id="txtSearch">
-                  <button onclick="getRecipes();">Search</button>
+               <div class="col-12 col-s-3 menu" style="margin-left: 300px;">
+                  <button id="search" onclick="search();">Search</button>
                </div>
-               <div class="col-12 col-s-6" id="divResults">
-                  <h2>Results</h2>
+               <div class="col-12 col-s-6 results" id="divResults" style="margin-left: 300px;">
+                  <h1>Results</h1>
                   <ul id="ulResults">
                   </ul>
                </div>
             </div>
          </section>
       </div>
-
-
       <footer>
          <br /><br />
          Address. xxx XXX Portland, OR xxxxx<br />
-         Tel. 123-456-7890<br />
-         Email. nev05002@byui.edu<br /><br />
-         © 2021 by DNeves.
-         <br /><br />
+         Tel. 503-891-3045<br />
+         <a class="email" href="mailto:nev05002@byui.edu">Email: nev05002@byui.edu</a><br />
+         © 2020 by DNeves.
+         <br />
          <a href="#">
             <div class="button-link link-current">myMenuApp</div>
          </a><br />
-         <a href="#">Contact Us!</a>
+         <a class="contact" href="mailto:nev05002@byui.edu">Contact Us!</a>
       </footer>
    </body>
 </html>
