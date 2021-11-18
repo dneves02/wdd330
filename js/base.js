@@ -31,6 +31,14 @@ const links = [
       label: "Week08",
       url: "./week08/week8.html"
    },
+   {
+      label: "Week09",
+      url: "./week09/week9.html"
+   },
+   {
+      label: "Week10",
+      url: "./week10/week10.html"
+   },
 ]
 function get_index(theButtonClicked){
    var index = $("#index");
