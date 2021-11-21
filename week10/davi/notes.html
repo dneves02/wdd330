@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+      <head>
+         <title> Davi Neves' Portfolio</title>
+         <meta charset="UTF-8" />
+         <meta name="author" content="Davi Neves">
+   
+         <!-- CSS only -->
+         <link rel="stylesheet" href="../../css/base.css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+         <!-- JS, Popper.js, and jQuery -->
+         <script src="../../js/base.js"></script>
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+      </head>
+      <style>
+         input:invalid {
+            border: 2px dashed red;
+          }
+          
+         input:valid {
+            border: 2px solid black;
+          }
+
+      </style>
+      <body>
+         <h2>FORM VALIDATION</h2>
+         <p>1)</p>
+         <form>
+            <label for="choose">Would you prefer a banana or cherry?</label>
+            <input id="choose" name="i_like">
+            <button>Submit</button>
+          </form>
+          
+          <p>2)</p>
+
+          <form>
+            <label for="choose">Would you prefer a banana or cherry? (required)</label>
+            <input id="choose" name="i_like" required>
+            <button>Submit</button>
+          </form>
+         <style>
+         input:invalid {
+            border: 2px dashed red;
+         }
+
+         input:invalid:required {
+            background-image: linear-gradient(to right, pink, lightgreen);
+         }
+
+         input:valid {
+            border: 2px solid black;
+         }
+         </style> 
+
+          <p>3)</p>
+
+          <form>
+            <p>
+              <fieldset>
+                <legend>Do you have a driver's license?<abbr title="This field is mandatory" aria-label="required">*</abbr></legend>
+                <!-- While only one radio button in a same-named group can be selected at a time,
+                     and therefore only one radio button in a same-named group having the "required"
+                     attribute suffices in making a selection a requirement -->
+                <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
+                <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+              </fieldset>
+            </p>
+            <p>
+              <label for="n1">How old are you?</label>
+              <!-- The pattern attribute can act as a fallback for browsers which
+                   don't implement the number input type but support the pattern attribute.
+                   Please note that browsers that support the pattern attribute will make it
+                   fail silently when used with a number field.
+                   Its usage here acts only as a fallback -->
+              <input type="number" min="12" max="120" step="1" id="n1" name="age"
+                     pattern="\d+">
+            </p>
+            <p>
+              <label for="t1">What's your favorite fruit?<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+              <input type="text" id="t1" name="fruit" list="l1" required
+                     pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+              <datalist id="l1">
+                <option>Banana</option>
+                <option>Cherry</option>
+                <option>Apple</option>
+                <option>Strawberry</option>
+                <option>Lemon</option>
+                <option>Orange</option>
+              </datalist>
+            </p>
+            <p>
+              <label for="t2">What's your e-mail address?</label>
+              <input type="email" id="t2" name="email">
+            </p>
+            <p>
+              <label for="t3">Leave a short message</label>
+              <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+            </p>
+            <p>
+              <button>Submit</button>
+            </p>
+          </form>
+          <style>
+             form {
+               font: 1em sans-serif;
+               max-width: 320px;
+            }
+
+            p > label {
+               display: block;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            textarea,
+            fieldset {
+               width : 100%;
+               border: 1px solid #333;
+               box-sizing: border-box;
+            }
+
+            input:invalid {
+               box-shadow: 0 0 5px 1px red;
+            }
+
+            input:focus:invalid {
+               box-shadow: none;
+            }
+          </style>
+          
+         <script>
+            //Forms:
+            [1, 2, 3].forEach(function (item, index) {
+            console.log(item, index);
+            });
+            //map
+            const three = [1, 2, 3];
+            const doubled = three.map(function (item) {
+            return item * 2;
+            });
+            console.log(three === doubled, doubled); // false, [2, 4, 6]
+
+            
+         </script>
+         <br><br><br>
+         <a href="../../index.html">
+            <div class="button">Index<br/></div>
+         </a>         
+      </body>
+   </html>
