@@ -13,7 +13,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', function(req, res) {
     console.log('Hello Davi! Going to your home page');
-    res.render("prototype")
+    res.render("home")
   })
   .use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
