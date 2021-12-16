@@ -1,5 +1,9 @@
 const links = [
    {
+      label: "Project",
+      url: "https://whispering-cove-13088.herokuapp.com/"
+   },
+   {
      label: "Week01",
      url: "./week01/hello.html"
    },
@@ -43,10 +47,7 @@ const links = [
       label: "Week11",
       url: "./week11/week11.html"
    },
-   {
-      label: "Project",
-      url: "https://whispering-cove-13088.herokuapp.com/"
-   },
+
 ]
 function get_index(theButtonClicked){
    var index = $("#index");
