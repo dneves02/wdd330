@@ -1,53 +1,102 @@
+<!DOCTYPE html>
+   <html lang="en-US">
+      <head>
+         <title> Davi Neves' Portfolio</title>
+         <meta charset="UTF-8" />
+         <meta name="author" content="Davi Neves">
+   
+         <!-- CSS only -->
+         <link rel="stylesheet" href="../../css/base.css">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+         <!-- JS, Popper.js, and jQuery -->
+         <script src="../../js/base.js"></script>
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+      </head>
+      <body>
 
+         <h2>Transforms and Transitions</h2>
+         <br><br><br>
+         <nav>
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Links</a>
+        </nav>
+        
+         
+<style>
 
+#delay {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
 
-<!-- Run code here in the context of Chapter 18-->
+#delay:hover {
+  font-size: 36px;
+}
+.box {
+    border-style: solid;
+    border-width: 1px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #0000FF;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
 
-<!doctype html>
-<script src="code/chapter/18_http.js"></script>
+.box:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    transform: rotate(180deg);
+}
 
-Notes: <select></select> <button>Add</button><br>
-<textarea style="width: 100%"></textarea>
+nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+a {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+a:hover, a:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+</style>
+
 
 <script>
-  let list = document.querySelector("select");
-  let note = document.querySelector("textarea");
+  var f = document.getElementById('foo');
+  document.addEventListener('click', function(ev){
+      f.style.transform = 'translateY('+(ev.clientY-25)+'px)';
+      f.style.transform += 'translateX('+(ev.clientX-25)+'px)';
+  },false);
 
-  let state;
-  function setState(newState) {
-    list.textContent = "";
-    for (let name of Object.keys(newState.notes)) {
-      let option = document.createElement("option");
-      option.textContent = name;
-      if (newState.selected == name) option.selected = true;
-      list.appendChild(option);
-    }
-    note.value = newState.notes[newState.selected];
-
-    localStorage.setItem("Notes", JSON.stringify(newState));
-    state = newState;
-  }
-  setState(JSON.parse(localStorage.getItem("Notes")) || {
-    notes: {"shopping list": "Carrots\nRaisins"},
-    selected: "shopping list"
-  });
-
-  list.addEventListener("change", () => {
-    setState({notes: state.notes, selected: list.value});
-  });
-  note.addEventListener("change", () => {
-    setState({
-      notes: Object.assign({}, state.notes,
-                           {[state.selected]: note.value}),
-      selected: state.selected
-    });
-  });
-  document.querySelector("button")
-    .addEventListener("click", () => {
-      let name = prompt("Note name");
-      if (name) setState({
-        notes: Object.assign({}, state.notes, {[name]: ""}),
-        selected: name
-      });
-    });
 </script>
+
+
+
+
+<a href="../../index.html">
+  <div class="button">Index<br/></div>
+</a>         
+
+  </body>
+
+</html>
