@@ -1,3 +1,5 @@
+
+
 const links = [
    {
       label: "Project",
@@ -52,16 +54,25 @@ const links = [
 function get_index(theButtonClicked){
    var index = $("#index");
    var arrayLength = links.length;
-   // document.getElementById("index").innerHTML = '<li><a href="./Week01/hello.html"><div class="button">Week 01<br/></div></a></li>';
-   if (arrayLength > 0){
-      for (var i = 0; i < arrayLength; i++){
-         var label = links[i].label;
-         var url = links[i].url;
-         
-         index.append('<li><a href="'+ url +'"><div class="button">'+ label +'<br/></div></a>');
-         index.append('<br/></li>')
-      }
+
+   if (index.hasClass("done")){
+      index.hide();
+      index.removeClass("done");
+
+   } else {
+      index.show();
+      if (arrayLength > 0){
       
-   }   
+         for (var i = 0; i < arrayLength; i++){
+            var label = links[i].label;
+            var url = links[i].url;
+            
+            index.append('<li><a href="'+ url +'"><div class="button">'+ label +'<br/></div></a>');
+            index.append('<br/></li>')
+         }
+         index.addClass("done")
+   
+      } 
+   }  
 
 }
