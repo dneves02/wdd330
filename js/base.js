@@ -44,12 +44,8 @@ const links = [
       url: "./week11/week11.html"
    },
    {
-      label: "Week12",
-      url: "./week12/week12.html"
-   },
-   {
-      label: "Week13",
-      url: "./week13/week13.html"
+      label: "Project",
+      url: "https://whispering-cove-13088.herokuapp.com/"
    },
 ]
 function get_index(theButtonClicked){
